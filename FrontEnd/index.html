@@ -7,7 +7,73 @@
         <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+        <div class="toast">Saved!</div>
+        <header id="header">
+                <section id="logo">Task Manager</section>
+                <section>
+                        <button id="login" class="upperBtn">Log In</button>
+                        <button id="signup" class="upperBtn">Sign Up</button>
+                </section>
+        </header>
+        <div id="container" class="expanded-0">
+                <div class="cards" id = "addnewCard" >
+                        <section class="editarea">
 
+                                <fieldset id="task">
+                                        <legend for="task">Edit Task</legend>
+                                        <label> Task* : 
+                                                <textarea name="task" id="tasktext" required></textarea>
+                                        </label>
+                                        <label> Topic :
+                                                <input type="text" name="topic" id="topictext" placeholder="N/a">
+                                        </label>
+                                        <label> Duration : 
+                                                <input type="text" name="duration" id="durationtext" placeholder="N/a">
+                                        </label>
+                                        <label> Amount : 
+                                                <input type="text" name="amount" id="amounttext" placeholder="N/a">
+                                        </label>
+                                        <div>
+                                                <button class="upperBtn" onclick="AddBtnSave()">Save</button>
+                                                <button class="upperBtn" onclick="AddBtnCancel()">Cancel</button>
+                                        </div>
+                                </fieldset>
+
+                        </section>
+                        <button data-text="Add New Task" class="buttons" id = "addnewBtn"></button>
+                </div>
+                <div class="cards" id = "pendingCard" >
+                        <section class="workarea">
+
+                                <!-- <article class="task">
+                                        <div > Task : this is the atcual</div>
+                                        <div  class="extra">
+                                                <section class="topic">⚡Topic : topic </section>
+                                                <section>
+                                                        <button class="eachBtn" id="editBtn"></button>
+                                                        <button class="eachBtn" id="DelBtn"></button>
+                                                </section>
+                                        </div>
+                                        <div class="taskLast">
+                                                <div >Amount : 100 pages</div>
+                                                <div >Duration : 24 hours</div>
+                                        </div>
+                                </article> -->
+        
+
+                        </section>
+                        <button data-text="Pending Tasks" class="buttons" id = "pendingBtn"></button>
+                </div>
+                <div class="cards" id = "startedCard" >
+                        <section class="workarea"></section>
+                        <button data-text="Started Tasks" class="buttons" id = "startedBtn"></button>
+                </div>
+                <div class="cards" id = "completedCard" >
+                        <section class="workarea"></section>
+                        <button data-text="Completed Tasks" class="buttons" id = "completedBtn"></button>
+                </div>
+        </div>
+      
         <script src="script.js"></script>
 </body>
 </html>
